@@ -1,0 +1,30 @@
+<mat-drawer-container autosize>
+    <mat-drawer #drawer mode="over">
+        <mat-nav-list class="listOptions">
+            <p>Aqui vai um logo!!!</p>
+            <a routerLink="/category">
+                <mat-icon color="primary"> category</mat-icon>
+                Categoria
+            </a>
+            <a routerLink="/brand">
+                <mat-icon color="primary"> sell</mat-icon>
+                Marca
+            </a>
+            <a routerLink="/product">
+                <mat-icon color="primary"> shopping_cart </mat-icon>
+                Produto
+            </a>
+        </mat-nav-list>
+    </mat-drawer>
+    <mat-drawer-content>
+        <mat-toolbar color="primary">
+            <button mat-icon-button (click)="drawer.toggle()">
+                <mat-icon>menu</mat-icon>
+            </button>
+            <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+            </button>
+            <span>My App</span>
+        </mat-toolbar>
+        <ng-content></ng-content>
+    </mat-drawer-content>
+</mat-drawer-container>
