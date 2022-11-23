@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { CategoryRoutingModule } from './category-routing.module';
 import { CategoryComponent } from './category.component';
 import { NavBarModule } from '../nav-bar/nav-bar.module';
+import { MaterialModule } from 'src/app/shared/material/material.module';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { NavBarModule } from '../nav-bar/nav-bar.module';
   imports: [
     CommonModule,
     CategoryRoutingModule,
-    NavBarModule
+    NavBarModule,
+    MaterialModule
   ], exports: [
     CategoryComponent
   ]
