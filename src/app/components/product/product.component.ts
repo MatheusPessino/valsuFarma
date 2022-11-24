@@ -23,7 +23,7 @@ export class ProductComponent implements OnInit {
     this.initializeTable();
   }
 
-  displayedColumns: String[] = ['id', 'name', 'description', 'price', 'stock', 'brand_id', 'category_id'];
+  displayedColumns: String[] = ['id', 'name', 'description', 'price', 'stock', 'brand_id', 'category_id', 'edit', 'delete'];
   dataSource = new MatTableDataSource(this.tableData);
 
   initializeTable(): void {

@@ -23,7 +23,7 @@ export class BrandComponent implements OnInit {
     this.initializeTable();
   }
 
-  displayedColumns: String[] = ['id', 'name'];
+  displayedColumns: String[] = ['id', 'name', 'edit', 'delete'];
   dataSource = new MatTableDataSource(this.tableData);
 
   applyFilter(event: Event) {
