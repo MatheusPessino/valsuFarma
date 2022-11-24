@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { ProductRoutingModule } from './product-routing.module';
 import { ProductComponent } from './product.component';
 import { NavBarModule } from '../nav-bar/nav-bar.module';
+import { MaterialModule } from 'src/app/shared/material/material.module';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { NavBarModule } from '../nav-bar/nav-bar.module';
   imports: [
     CommonModule,
     ProductRoutingModule,
-    NavBarModule
+    NavBarModule,
+    MaterialModule
   ], exports: [
     ProductComponent
   ]
