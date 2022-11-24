@@ -47,3 +47,18 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .full-width {
   width: 100%;
 }
+
+.centerButton{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  button{
+      margin-left: 10px;
+  }
+}
+
+.pagesTitles{
+  text-align: center;
+  color: rgb(63, 81, 181)
+}

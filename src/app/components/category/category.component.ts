@@ -23,7 +23,7 @@ export class CategoryComponent implements OnInit {
     this.initializeTable();
   }
 
-  displayedColumns: String[] = ['id', 'name', 'description'];
+  displayedColumns: String[] = ['id', 'name', 'description', 'edit', 'delete'];
   dataSource = new MatTableDataSource(this.tableData);
 
   initializeTable(): void {
