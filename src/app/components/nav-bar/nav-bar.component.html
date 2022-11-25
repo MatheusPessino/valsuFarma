@@ -14,6 +14,10 @@
                 <mat-icon color="primary"> shopping_cart </mat-icon>
                 Produto
             </a>
+            <a (click)="logout()">
+                <mat-icon color="primary">logout</mat-icon>
+                Sair
+            </a>   
         </mat-nav-list>
     </mat-drawer>
     <mat-drawer-content>
@@ -24,7 +28,7 @@
             <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
             </button>
             <a>ValsuFarma</a>
-            <button mat-mini-fab color="primary">
+            <button mat-mini-fab color="primary" (click)="logout()">
                 <mat-icon>logout</mat-icon>
             </button>   
         </mat-toolbar>
