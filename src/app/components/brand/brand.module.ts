@@ -5,11 +5,13 @@ import { BrandRoutingModule } from './brand-routing.module';
 import { BrandComponent } from './brand.component';
 import { NavBarModule } from '../nav-bar/nav-bar.module';
 import { MaterialModule } from 'src/app/shared/material/material.module';
+import { BrandLogComponent } from './children/brand-log/brand-log.component';
 
 
 @NgModule({
   declarations: [
-    BrandComponent
+    BrandComponent,
+    BrandLogComponent
   ],
   imports: [
     CommonModule,
@@ -17,7 +19,8 @@ import { MaterialModule } from 'src/app/shared/material/material.module';
     NavBarModule,
     MaterialModule
   ], exports: [
-    BrandComponent
+    BrandComponent,
+    BrandLogComponent
   ]
 })
 export class BrandModule { }

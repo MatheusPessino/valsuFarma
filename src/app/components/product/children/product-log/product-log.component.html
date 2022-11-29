@@ -1,0 +1,75 @@
+<app-nav-bar>
+    <ng-container>
+        <h2 class="pagesTitles">Log de alteração em Produtos</h2>
+        <mat-form-field appearance="standard" class="full-width">
+            <mat-label>Filtro</mat-label>
+            <input matInput (keyup)="applyFilter($event)" placeholder="Ex. ium" #input>
+        </mat-form-field>
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+            <ng-container matColumnDef="id">
+                <th mat-header-cell *matHeaderCellDef> # </th>
+                <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+            </ng-container>
+            <ng-container matColumnDef="dt_update">
+                <th mat-header-cell *matHeaderCellDef> Data alteração </th>
+                <td mat-cell *matCellDef="let element"> {{element.dt_update}} </td>
+            </ng-container>
+            <ng-container matColumnDef="name_old">
+                <th mat-header-cell *matHeaderCellDef> Nome antigo </th>
+                <td mat-cell *matCellDef="let element"> {{element.name_old}} </td>
+            </ng-container>
+            <ng-container matColumnDef="name_new">
+                <th mat-header-cell *matHeaderCellDef> Nome novo </th>
+                <td mat-cell *matCellDef="let element"> {{element.name_new}} </td>
+            </ng-container>
+            <ng-container matColumnDef="description_old">
+                <th mat-header-cell *matHeaderCellDef> Descrição antiga </th>
+                <td mat-cell *matCellDef="let element"> {{element.description_old}} </td>
+            </ng-container>
+            <ng-container matColumnDef="description_new">
+                <th mat-header-cell *matHeaderCellDef> Descrição nova </th>
+                <td mat-cell *matCellDef="let element"> {{element.description_new}} </td>
+            </ng-container>
+            <ng-container matColumnDef="price_old">
+                <th mat-header-cell *matHeaderCellDef> Preço antigo </th>
+                <td mat-cell *matCellDef="let element"> {{element.price_old}} </td>
+            </ng-container>
+            <ng-container matColumnDef="price_new">
+                <th mat-header-cell *matHeaderCellDef> Preço novo </th>
+                <td mat-cell *matCellDef="let element"> {{element.price_new}} </td>
+            </ng-container>
+            <ng-container matColumnDef="stock_old">
+                <th mat-header-cell *matHeaderCellDef> Estoque antigo </th>
+                <td mat-cell *matCellDef="let element"> {{element.stock_old}} </td>
+            </ng-container>
+            <ng-container matColumnDef="stock_new">
+                <th mat-header-cell *matHeaderCellDef> Estoque novo </th>
+                <td mat-cell *matCellDef="let element"> {{element.stock_new}} </td>
+            </ng-container>
+            <ng-container matColumnDef="category_old">
+                <th mat-header-cell *matHeaderCellDef> Categoria antigo </th>
+                <td mat-cell *matCellDef="let element"> {{element.category_old}} </td>
+            </ng-container>
+            <ng-container matColumnDef="category_new">
+                <th mat-header-cell *matHeaderCellDef> Categoria nova </th>
+                <td mat-cell *matCellDef="let element"> {{element.category_new}} </td>
+            </ng-container>
+            <ng-container matColumnDef="brand_old">
+                <th mat-header-cell *matHeaderCellDef> Marca antiga </th>
+                <td mat-cell *matCellDef="let element"> {{element.brand_old}} </td>
+            </ng-container>
+            <ng-container matColumnDef="brand_new">
+                <th mat-header-cell *matHeaderCellDef> Marca nova</th>
+                <td mat-cell *matCellDef="let element"> {{element.brand_new}} </td>
+            </ng-container>
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            <tr class="mat-row" *matNoDataRow>
+                <td class="mat-cell" colspan="2">No data matching the filter "{{input.value}}"</td>
+            </tr>
+        </table>
+        <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons
+            aria-label="Select page of periodic chamados" style="width: 80%; margin: auto">
+        </mat-paginator>
+    </ng-container>
+</app-nav-bar>
