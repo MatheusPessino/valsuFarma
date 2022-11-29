@@ -5,11 +5,13 @@ import { ProductRoutingModule } from './product-routing.module';
 import { ProductComponent } from './product.component';
 import { NavBarModule } from '../nav-bar/nav-bar.module';
 import { MaterialModule } from 'src/app/shared/material/material.module';
+import { ProductLogComponent } from './children/product-log/product-log.component';
 
 
 @NgModule({
   declarations: [
-    ProductComponent
+    ProductComponent,
+    ProductLogComponent
   ],
   imports: [
     CommonModule,

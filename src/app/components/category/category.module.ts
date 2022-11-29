@@ -5,11 +5,13 @@ import { CategoryRoutingModule } from './category-routing.module';
 import { CategoryComponent } from './category.component';
 import { NavBarModule } from '../nav-bar/nav-bar.module';
 import { MaterialModule } from 'src/app/shared/material/material.module';
+import { CategoryLogComponent } from './children/category-log/category-log.component';
 
 
 @NgModule({
   declarations: [
-    CategoryComponent
+    CategoryComponent,
+    CategoryLogComponent
   ],
   imports: [
     CommonModule,
