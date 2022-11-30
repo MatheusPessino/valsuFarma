@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CategoryComponent } from './category.component';
 import { CategoryLogComponent } from './children/category-log/category-log.component';
+import { CreateCategoryComponent } from './children/create-category/create-category.component';
 
 const routes: Routes = [
   {
@@ -11,6 +12,10 @@ const routes: Routes = [
   {
     path: 'categoryLog',
     component:CategoryLogComponent
+  },
+  {
+    path: 'new',
+    component: CreateCategoryComponent
   }
 ];
 

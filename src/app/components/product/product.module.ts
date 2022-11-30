@@ -6,12 +6,14 @@ import { ProductComponent } from './product.component';
 import { NavBarModule } from '../nav-bar/nav-bar.module';
 import { MaterialModule } from 'src/app/shared/material/material.module';
 import { ProductLogComponent } from './children/product-log/product-log.component';
+import { CreateProductComponent } from './children/create-product/create-product.component';
 
 
 @NgModule({
   declarations: [
     ProductComponent,
-    ProductLogComponent
+    ProductLogComponent,
+    CreateProductComponent
   ],
   imports: [
     CommonModule,

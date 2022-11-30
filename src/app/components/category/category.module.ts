@@ -6,12 +6,14 @@ import { CategoryComponent } from './category.component';
 import { NavBarModule } from '../nav-bar/nav-bar.module';
 import { MaterialModule } from 'src/app/shared/material/material.module';
 import { CategoryLogComponent } from './children/category-log/category-log.component';
+import { CreateCategoryComponent } from './children/create-category/create-category.component';
 
 
 @NgModule({
   declarations: [
     CategoryComponent,
-    CategoryLogComponent
+    CategoryLogComponent,
+    CreateCategoryComponent
   ],
   imports: [
     CommonModule,
