@@ -3,6 +3,7 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 import { Category } from 'src/app/models/category';
 import { CategoryService } from 'src/app/services/category.service';
+import { HotToastService} from '@ngneat/hot-toast';
 
 @Component({
   selector: 'app-category',
@@ -16,7 +17,7 @@ export class CategoryComponent implements OnInit {
 
   public tableData: Category[] = [];
 
-  constructor(private service: CategoryService) { }
+  constructor(private service: CategoryService, private toastr: HotToastService) { }
 
   ngOnInit(): void {
     this.dataSource.paginator = this.paginator;
@@ -37,5 +38,14 @@ export class CategoryComponent implements OnInit {
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
+  }
+
+  delete(id: number): void {
+    this.service.delete(id).subscribe({
+      next: response => {
+        this.toastr.success("Cliente deletado com sucesso!");
+        this.initializeTable();
+      }
+    });
   }
 }
