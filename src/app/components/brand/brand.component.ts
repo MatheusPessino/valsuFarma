@@ -3,6 +3,7 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 import { Brand } from 'src/app/models/brand';
 import { BrandService } from 'src/app/services/brand.service';
+import { HotToastService} from '@ngneat/hot-toast';
 
 @Component({
   selector: 'app-brand',
@@ -16,7 +17,7 @@ export class BrandComponent implements OnInit {
 
   public tableData: Brand[] = [];
 
-  constructor(private service: BrandService) { }
+  constructor(private service: BrandService, private toastr: HotToastService ) { }
 
   ngOnInit(): void {
     this.dataSource.paginator = this.paginator;
@@ -39,6 +40,12 @@ export class BrandComponent implements OnInit {
     });
   }
 
+  delete(id: number): void {
+    this.service.delete(id).subscribe({
+      next: response => {
+        this.toastr.success("Cliente deletado com sucesso!");
+        this.initializeTable();
+      }
+    });
+  }
 }
-
-
